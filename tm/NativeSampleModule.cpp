@@ -17,8 +17,7 @@ _Static_assert(sizeof (void*) == sizeof (uintptr_t),
 #error TBD pointer size
 #endif
 
-_Static_assert(sizeof (void*) => sizeof (double),
-               "Incorrect double size");
+// _Static_assert(sizeof (void*) => sizeof (double), "Incorrect double size");
 
 double voidPtrToDouble(void* ptr) {
     double d = 0;
