@@ -1,7 +1,19 @@
 {
   "name": "wasm_react_test",
+  "description": "React Native with Cxx Turbo Native Modules",
+  "author": "<Your Name> <your_email@your_provider.com> (https://github.com/<your_github_handle>)",
+  "license": "MIT",
+  "homepage": "https://github.com/<your_github_handle>/#readme",
   "version": "0.0.1",
   "private": true,
+  "codegenConfig": {
+    "name": "AppSpecs",
+    "type": "all",
+    "jsSrcsDir": "tm",
+    "android": {
+      "javaPackageName": "com.facebook.fbreact.specs"
+    }
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -10,6 +22,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "expo": ">=50.0.0-0 <51.0.0",
+    "expo-build-properties": "~0.11.0",
+    "expo-image": "~1.10.0",
     "react": "18.2.0",
     "react-native": "0.73.0"
   },

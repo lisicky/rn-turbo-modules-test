@@ -39,6 +39,10 @@ target 'wasm_react_test' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  if ENV['RCT_NEW_ARCH_ENABLED'] == '1'
+    pod 'AppTurboModules', :path => "./../tm"
+  end
+
   target 'wasm_react_testTests' do
     inherit! :complete
     # Pods for testing
